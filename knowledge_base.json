@@ -1,0 +1,95 @@
+[
+  {
+    "category": "FRONTEND_TEST_FAILURE",
+    "title": "RTL unable to find element after async render",
+    "keywords": [
+      "TestingLibraryElementError",
+      "Unable to find an element",
+      "findBy",
+      "waitFor"
+    ],
+    "fix": "Use findBy* or waitFor for async UI updates. Verify text changed by translations, feature flags, or mocked Redux state.",
+    "prevention": "Prefer accessible queries and shared render helpers with Redux/router/i18n providers."
+  },
+  {
+    "category": "FRONTEND_TEST_FAILURE",
+    "title": "React act warning caused by unresolved async state update",
+    "keywords": [
+      "act",
+      "not wrapped in act",
+      "async"
+    ],
+    "fix": "Await user events and async UI updates. Use await waitFor(...) around assertions triggered by state updates.",
+    "prevention": "Standardize RTL helpers and avoid mixing fake timers with unresolved promises."
+  },
+  {
+    "category": "TYPESCRIPT_COMPILE_FAILURE",
+    "title": "Type drift between API model and UI props",
+    "keywords": [
+      "TS2339",
+      "TS2322",
+      "Property",
+      "not assignable"
+    ],
+    "fix": "Update the interface/type at the boundary and adjust consuming selectors/components. Fix the first compiler error first.",
+    "prevention": "Add contract tests or generated type validation at API boundaries."
+  },
+  {
+    "category": "NPM_DEPENDENCY_FAILURE",
+    "title": "npm ci fails from package-lock drift",
+    "keywords": [
+      "npm ERR!",
+      "package-lock",
+      "ERESOLVE"
+    ],
+    "fix": "Regenerate package-lock.json with the approved Node/npm version and run npm ci from a clean checkout.",
+    "prevention": "Pin Node/npm versions in CI and avoid manual lockfile edits."
+  },
+  {
+    "category": "DOTNET_BUILD_FAILURE",
+    "title": ".NET SDK or NuGet restore mismatch",
+    "keywords": [
+      "NU",
+      "NETSDK",
+      "project.assets.json",
+      "dotnet restore"
+    ],
+    "fix": "Run dotnet restore with the CI SDK version. Check csproj package references and NuGet source availability.",
+    "prevention": "Pin SDK in global.json and keep package references consistent across projects."
+  },
+  {
+    "category": "SCHEMA_OR_CONTRACT_FAILURE",
+    "title": "Schema validation failure after payload shape change",
+    "keywords": [
+      "schema validation",
+      "XSD",
+      "required property",
+      "does not match schema"
+    ],
+    "fix": "Compare actual payload against schema. Add missing required fields or update the schema if the contract intentionally changed.",
+    "prevention": "Add contract tests and sample payload validation in CI."
+  },
+  {
+    "category": "JENKINS_INFRA_FAILURE",
+    "title": "Jenkins agent or workspace issue",
+    "keywords": [
+      "agent offline",
+      "workspace",
+      "No space left on device",
+      "Permission denied"
+    ],
+    "fix": "Rerun on a clean workspace or healthy agent. Escalate to CI owner if multiple builds fail similarly.",
+    "prevention": "Add node health checks, workspace cleanup, and disk monitoring."
+  },
+  {
+    "category": "MEMORY_FAILURE",
+    "title": "Node heap out of memory during frontend build",
+    "keywords": [
+      "heap out of memory",
+      "Allocation failed",
+      "JavaScript heap"
+    ],
+    "fix": "Inspect bundle/test growth. Temporarily increase NODE_OPTIONS only if the build genuinely needs more heap.",
+    "prevention": "Track bundle size, split heavy tests, and avoid excessive test parallelism."
+  }
+]

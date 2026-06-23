@@ -1,0 +1,10 @@
+[Pipeline] sh
++ npm run validate-schema
+
+Schema validation failed for EstimateProfilePayload.json
+required property reviewerOrgCd is missing
+additional property previousReviewerOrgCd does not match schema
+XML validation failed against MCEProfile.xsd
+
+ERROR: contract test failed
+Finished: FAILURE

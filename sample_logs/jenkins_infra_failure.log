@@ -1,0 +1,6 @@
+[Pipeline] node
+Still waiting to schedule task
+Jenkins agent windows-build-node-03 is offline
+Cannot contact windows-build-node-03: java.io.IOException: channel is already closed
+ERROR: Build failed due to Jenkins node communication issue
+Finished: FAILURE

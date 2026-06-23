@@ -1,0 +1,12 @@
+[Pipeline] sh
++ npm ci
+
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: react-scripts@5.0.1
+npm ERR! Found: typescript@5.4.0
+npm ERR! peer dependency conflict
+npm ERR! Fix the upstream dependency conflict, or retry this command with --force
+
+ERROR: script returned exit code 1
+Finished: FAILURE

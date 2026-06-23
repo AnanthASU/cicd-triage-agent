@@ -1,0 +1,13 @@
+[Pipeline] sh
++ dotnet build EstimateProfileService.sln --configuration Release
+
+Determining projects to restore...
+All projects are up-to-date for restore.
+ProfileHistoryRepository.cs(42,21): error CS1061: 'EstimateProfile' does not contain a definition for 'ReviewerOrgCd' and no accessible extension method 'ReviewerOrgCd' accepting a first argument of type 'EstimateProfile' could be found
+ProfileController.cs(88,17): error CS1503: Argument 1: cannot convert from 'string' to 'System.Guid'
+
+Build FAILED.
+    0 Warning(s)
+    2 Error(s)
+ERROR: script returned exit code 1
+Finished: FAILURE

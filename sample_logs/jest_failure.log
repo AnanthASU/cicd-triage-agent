@@ -1,0 +1,22 @@
+[Pipeline] sh
++ npm test -- EstimateProfile.test.tsx
+
+FAIL src/features/estimate/EstimateProfile.test.tsx
+  ● EstimateProfile › shows reviewer org after profile update
+
+    TestingLibraryElementError: Unable to find an element with the text: Reviewer Org
+
+    Ignored nodes: comments, script, style
+    <body>
+      <div>
+        <span>Profile History</span>
+      </div>
+    </body>
+
+    expect(received).toBeInTheDocument()
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 23 passed, 24 total
+[Pipeline] }
+ERROR: script returned exit code 1
+Finished: FAILURE
